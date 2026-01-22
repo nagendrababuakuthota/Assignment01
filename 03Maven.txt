@@ -1,0 +1,39 @@
+(a) Create a Maven project
+
+    Steps to Create a Maven Project in Eclipse
+        Open and Launch Eclipse IDE.
+        Click File -> New -> Maven project -> click next
+        -> select project location(Default Workspace Location) -> click next
+        -> select archetype(maven-archetype-quickstart) -> click next
+        -> specify project details(Group Id and Artifact Id) -> Finish.
+
+(b) Add Selenium dependency in pom.xml
+
+    Navigate to "mvnrepositories.com" in browser, search selenium, there we can find the dependencies and its versions.
+    Pick the latest one and copy the dependency.
+    Open pom.xml in maven project -> in <dependencies> section -> Add:
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.18.1</version>
+        </dependency>
+
+(c) Write a WebDriver test to: Launch browser, Open a URL, Click on a web element.
+
+    package com.example.selenium_demo;
+    import org.openqa.selenium.By;
+    import org.openqa.selenium.WebDriver;
+    import org.openqa.selenium.WebElement;
+    import org.openqa.selenium.chrome.ChromeDriver;
+    public class SeleniumTest {
+        public void testWebDriver() {
+        	WebDriver driver = new ChromeDriver();
+         	driver.get("https://happenstance.com/");
+        	driver.findElement(By.xpath("//*[@id="app"]/div[2]/article/section/div/div/div[2]/a/img")).click();
+        	driver.quit();
+       }
+   }
+ 
+(d) Execute the test
+
+    Right-click the test class -> Run As -> Maven Test

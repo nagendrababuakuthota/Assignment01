@@ -1,0 +1,58 @@
+JIRA-style User Stories for Login Functionality, each with a Description and Acceptance Criteria written in Gherkin format is as follows:
+
+i. User Story: Valid Login
+
+    User Story Title: Login with valid credentials
+    Description:
+        As a registered user,
+        I want to log in using valid username and password,
+        So that I can securely access the application dashboard.
+    Acceptance Criteria (Gherkin Format):
+        Feature: Valid Login
+        Scenario: User logs in with valid credentials
+            Given the user is on the login page
+            When the user enters a valid username
+            And the user enters a valid password
+            And the user clicks on the Login button
+            Then the user should be successfully logged in
+            And the user should be redirected to the dashboard
+            And the dashboard page should be displayed
+
+ii. User Story: Invalid Login
+
+    User Story Title: Login with invalid credentials
+    Description:
+        As a user,
+        I want to be prevented from logging in with invalid credentials,
+        So that unauthorized access is restricted.
+    Acceptance Criteria (Gherkin Format):
+        Feature: Invalid Login
+        Scenario: User logs in with invalid credentials
+            Given the user is on the login page
+            When the user enters an invalid username or password
+            And the user clicks on the Login button
+            Then the login should fail
+            And an error message should be displayed
+            And the user should remain on the login page
+
+iii.User Story: Mandatory Field Validation (Screenshot Submission)
+
+    User Story Title: Mandatory field validation on login page
+    Description:
+        As a user,
+        I want to be notified when mandatory login fields are left empty,
+        So that I know what information is required to log in successfully.
+        Acceptance Criteria (Gherkin Format):
+            Feature: Mandatory Field Validation
+            Scenario: User submits login form with empty fields
+                Given the user is on the login page
+                When the user clicks on the Login button without entering username and password
+                Then validation messages should be displayed for mandatory fields
+                And the login should not be successful
+                And the user should remain on the login page
+              -  And a screenshot of the validation error should be captured and attached
+
+
+
+
+

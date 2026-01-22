@@ -1,0 +1,18 @@
+labex:project/ $ mkdir VeevaSystems
+labex:project/ $ cd VeevaSystems
+labex:VeevaSystems/ $ touch file.txt
+labex:VeevaSystems/ $ echo "this is sample file" > file.txt
+labex:VeevaSystems/ $ chmod u=rw,g=r,o=r file.txt
+labex:VeevaSystems/ $ cat file.txt
+this is sample file
+labex:VeevaSystems/ $ ls -l file.txt
+-rw-r--r-- 1 labex labex 20 Jan 22 12:32 file.txt
+labex:VeevaSystems/ $ vi file2.txt
+labex:VeevaSystems/ $ cat file2.txt 
+hello this is the contents of sample file2
+labex:VeevaSystems/ $ ls -l file2.txt
+-rw-rw-r-- 1 labex labex 43 Jan 22 12:37 file2.txt
+labex:VeevaSystems/ $ chmod 644 file2.txt
+labex:VeevaSystems/ $ ls -l file2.txt    
+-rw-r--r-- 1 labex labex 43 Jan 22 12:37 file2.txt
+labex:VeevaSystems/ $ 

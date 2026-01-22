@@ -1,0 +1,51 @@
+The Software Development Life Cycle (SDLC) is a structured process used to develop high-quality software systematically. It consists of the following main phases:
+
+Requirements → Planning → Design → Coding → Testing → Deployment → Maintenance
+
+1. Requirement Analysis
+
+    Understand and document what the users need.
+    Gather functional and non-functional requirements.
+    Identify system constraints and feasibility.
+    Example: Software Requirement Specification (SRS)
+
+2. Planning
+
+    Define project scope, timeline, cost, and resources.
+    Identify risks and mitigation strategies.
+    Decide on the SDLC model (Waterfall, Agile, Spiral, etc.).
+    Example: Project plan
+
+3. System Design
+
+    Convert requirements into a technical blueprint.
+    Design system architecture, database, UI, and data flow.
+    Includes: High-Level Design (HLD) & Low-Level Design (LLD)
+    Example: Design documents
+
+4. Implementation (Coding)
+
+    Developers write source code based on design specifications.
+    Follow coding standards and best practices.
+    Unit testing is often done during this phase.
+    Example: Working software modules
+
+5. Testing
+
+    Verify that the software meets requirements and is defect-free.
+    Types of testing: Unit testing , Integration testing , System testing , User Acceptance Testing (UAT)
+    Example: Test reports & validated software
+
+6. Deployment
+
+    Release the software into the production environment.
+    Can be done in stages or all at once.
+    Includes user training and documentation.
+    Output: Live system
+
+7. Maintenance
+
+    Fix bugs found after deployment.
+    Improve performance and add enhancements.
+    Adapt software to new environments or requirements.
+    Output: Updated and improved software

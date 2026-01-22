@@ -1,0 +1,44 @@
+4. Write Selenium Web Driver code to:
+(a) Launch the browser and navigate to a given URL
+(b) Locate elements using robust CSS selectors
+(c) Perform basic user actions:
+      o	Enter text into an input field
+      o	Click a button
+(d) Apply synchronization using:
+      o	Implicit Wait
+      o	Explicit Wait (WebDriverWait)
+(e) Perform verification & validation to check whether a web element is displayed
+
+
+package com.example.selenium_demo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+public class Selenium {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.instagram.com/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebElement usernameField = driver.findElement(By.cssSelector("#_r_e_"));
+        WebElement passwordField = driver.findElement(By.cssSelector("#_r_h_"));
+        WebElement loginButton   = driver.findElement(By.cssSelector("button[name='login']"));
+        usernameField.sendKeys("username");
+        passwordField.sendKeys("password");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement dashboard = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[name='login']"))
+        );
+        loginButton.click();
+        if (dashboard.isDisplayed()) {
+            System.out.println("Login successful, Dashboard is displayed.");
+        } else {
+            System.out.println("Login failed, Dashboard not displayed.");
+        }
+        driver.quit();
+    }
+}
